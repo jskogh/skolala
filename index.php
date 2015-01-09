@@ -12,7 +12,7 @@
 			<div id="header">
 
 				<div id="logo">	<!-- <img src="img/logo.png" alt="logotype" width="105px" height="115px"/> -->
-				<h1>Skolalan</h1>
+				<h1>Skolala</h1>
 				</div>	
 
 			
