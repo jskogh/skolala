@@ -1,0 +1,237 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400|Yanone+Kaffeesatz:400,200);
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #000;
+	
+}
+
+h1,h2, h3, h4 {
+	
+}
+
+
+#wrapper {
+	
+}
+
+#header {
+	width: 1100px;
+	margin-left: 83px;
+	margin-bottom: 20px;
+	margin-right: 60px;
+	display: inline-block;
+	border-bottom: 1px solid rgba(88,183,126,0.75);
+}
+
+#header h1 {
+	font-size: 58px;
+	font-weight: 100;
+	margin-bottom: 5px;
+
+}
+
+#logo {
+	margin-top: 18px;
+	display: inline-block;
+	
+}
+#navbar {
+	margin-top: 29px;
+	max-height: 30px;
+	display: inline-block;
+	float: right;
+	text-align: center;
+	padding-bottom: 10px;
+
+}
+
+ ul, li {
+	display: inline-block;
+	cursor: pointer;
+	
+}
+
+#navbar li {
+	padding: 5px 15px 10px 15px;
+
+}
+
+#navbar li:hover {
+	background:  rgba(88,183,126,0.75);
+}
+
+
+
+#shopping_cart {
+	margin-right: 20px;
+	display: inline-block;
+}
+
+#content {
+	display: inline-block;
+	width: 100%;
+	margin-top: 50px;
+	
+}
+
+#two_categories_top {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#category_one {
+	background: url("../img/urban.jpg");
+	width: 430px;
+	height: 600px;
+	margin-right: 50px;
+	display: inline-block;
+}
+
+#category_two {
+	background: url("../img/adventure.jpg");
+	height: 600px;
+	width: 430px;
+	display: inline-block;	
+}
+
+#four_columns {
+	width: 1100px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+#four_columns img {
+	margin-right: 33px;
+}
+
+
+
+#about_link {
+	width: 1100px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+#shoes_link {
+	width: 1100px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+#environment_link {
+
+}
+
+#footer {
+	background: #e2e8e5;
+}
+
+.offers {
+	color: #fff;
+}
+
+#social_media_container {
+	padding-top: 10px;
+	width: 1100px;
+	margin: 0 auto;
+	height: 80px;
+	border-bottom: 1px solid #000 ;
+	border-top: 1px solid #000 ;
+}
+
+#social_media_logos {
+	margin-right: 30px;
+	display: inline-block;
+	width: 330px;
+}
+
+#newsletter {
+	margin-top: 10px;
+	display: inline-block;
+	width: 730px;
+	height: 90px;
+	vertical-align: middle;
+}
+
+#newsletter input[type="text"] {
+	height: 35px;
+	width: 200px;
+	margin-left: 25px;
+	padding-left: 10px;
+
+}
+
+#newsletter input[type="submit"] {
+	height: 40px;
+	width: 130px;
+	border: 0px;
+	margin-left: 25px;
+	background-color: #9adaac;
+	color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+
+/** PRODUCT PAGE **/
+#slideshow {
+	width: 1100px;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+
+#slideshow img {
+	width: 500px;
+	height: 350px;
+}
+
+#product_content {
+	width: 1100px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+#product_categories h3 {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+#product_content li {
+	display: block;
+}
+
+#product_content ul {
+	margin-bottom: 15px;
+	display: block;	
+}
+
+#product_categories {
+	border-right: 1px solid #000 ;
+	width: 200px;
+	display: inline-block;
+}
+
+#product_categories a {
+
+	
+}
+
+#products {
+	width: 800px;
+	display: inline-block;	
+	float: right;
+	margin-right: 30px;
+}
+
+#products img {
+	width: 200px;
+	
+}
+
+/** SINGLE PRODUCT PAGE **/
