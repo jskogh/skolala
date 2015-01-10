@@ -1,3 +1,9 @@
+<?php
+use app\models\User;
+require_once 'app/start.php';
+
+$test = new User();
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
