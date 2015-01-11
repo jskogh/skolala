@@ -1,8 +1,15 @@
 <?php
 use app\models\User;
+use app\models\Shoes;
+use app\DB;
+
 require_once 'app/start.php';
 
 $test = new User();
+$db = DB::get();
+
+$shoe = new Shoes();
+var_dump($shoe->get(1));
 ?>
 <!DOCTYPE HTML>
 <html>

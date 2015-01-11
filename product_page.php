@@ -1,3 +1,14 @@
+<?php
+use app\models\User;
+use app\models\Shoes;
+use app\DB;
+
+require_once 'app/start.php';
+
+$shoes = new Shoes();
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -57,9 +68,12 @@
 				<div id="products">
 				
 					<table>
-						<tr> 
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
+						<tr>
+							<?php foreach ($shoes->all() as $shoe) {
+
+								echo "<td><img src='img/shoes/" . $shoe->pic1 . "'" .  "alt='shoe1'/></td>";
+							}
+							?>
 							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
 							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
 						</tr>

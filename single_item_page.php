@@ -1,3 +1,12 @@
+<?php
+use app\models\User;
+use app\models\Shoes;
+use app\DB;
+
+require_once 'app/start.php';
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>

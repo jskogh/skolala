@@ -1,5 +1,8 @@
 <?php namespace app\models;
 
+use app\DB;
+use PDO;
+
 class User {
 
     public $name;
