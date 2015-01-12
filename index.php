@@ -9,7 +9,7 @@ $test = new User();
 $db = DB::get();
 
 $shoe = new Shoes();
-var_dump($shoe->get(1));
+
 ?>
 <!DOCTYPE HTML>
 <html>
