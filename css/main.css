@@ -187,8 +187,8 @@ h1,h2, h3, h4 {
 }
 
 #slideshow img {
-	width: 500px;
-	height: 350px;
+	width: 450px;
+	height: 300px;
 }
 
 #product_content {
@@ -234,4 +234,41 @@ h1,h2, h3, h4 {
 	
 }
 
+
+
 /** SINGLE PRODUCT PAGE **/
+
+
+#single_item_page {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+#product_image {
+	padding-top: 100px;
+	display: inline-block;
+	width: 450px;
+} 
+
+#more_images {
+	
+}
+
+#product_image img {
+	max-width: 450px;	
+}
+
+#product_info {
+	display: inline-block;
+	text-transform: uppercase;
+	vertical-align: top;
+	margin: 100px 0 0 90px;
+}
+
+#releted_products {
+	
+}
+
+#environmental_stuff {
+	
+}
