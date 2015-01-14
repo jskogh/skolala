@@ -1,3 +1,11 @@
+<?php
+
+	session_start();
+	if ( ! $_SESSION['skolalaUser']) {
+		$_SESSION['skolalaUser'] = 'visitor';
+	}
+
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>

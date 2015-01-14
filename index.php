@@ -5,7 +5,7 @@
 	
 	require_once 'app/start.php';
 
-include("incl/header.php");
+
 
 $test = new User();
 $db = DB::get();
@@ -13,8 +13,9 @@ $db = DB::get();
 $shoe = new Shoes();
 
 ?>
-			
-			
+
+			<?php include("incl/header.php"); ?>
+
 			<div id="content">
 				
 				<div id="about_link">

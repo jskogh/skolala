@@ -1,4 +1,6 @@
-<?php include("incl/header.php"); ?>
+
+
+				<?php include("incl/header.php"); ?>
 
 				<div id="single_item_page">
 				

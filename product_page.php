@@ -5,12 +5,15 @@
 	
 	require_once 'app/start.php';
 	
-include("incl/header.php");
+
 
 $shoes = new Shoes();
 
 ?>
-			
+
+
+			<?php include("incl/header.php"); var_dump($_SESSION['skolalaUser']) ?>
+
             <div id="slideshow">
     	        <img id="slideshowImg" src="img/slideshow/01.png" name="slideshow" />
             </div>
