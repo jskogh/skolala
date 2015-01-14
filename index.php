@@ -1,9 +1,11 @@
 <?php
-use app\models\User;
-use app\models\Shoes;
-use app\DB;
+	use app\models\User;
+	use app\models\Shoes;
+	use app\DB;
+	
+	require_once 'app/start.php';
 
-require_once 'app/start.php';
+include("incl/header.php");
 
 $test = new User();
 $db = DB::get();
@@ -11,40 +13,6 @@ $db = DB::get();
 $shoe = new Shoes();
 
 ?>
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title> Skolala || Ekologiska skor </title>
-		<link href="css/main.css" rel="stylesheet" type="text/css" />
-		<link href="css/reset.css" rel="stylesheet" type="text/css" />
-	</head>
-	
-	<body>
-		<div id="wrapper">
-			<div id="header">
-
-				<div id="logo">	<!-- <img src="img/logo.png" alt="logotype" width="105px" height="115px"/> -->
-				<h1>Skolala</h1>
-				</div>	
-
-			
-				<div id="navbar">
-					
-					<ul>
-						<li href="">Boots</li>
-						<li href="">Sneakers</li>
-						<li href="">Sale</li>
-						
-					</ul>
-						
-					<div id="shopping_cart">
-						
-					</div>
-					
-				</div>
-			
-			</div>
 			
 			
 			<div id="content">
@@ -65,7 +33,7 @@ $shoe = new Shoes();
 							<td> <img src="img/frontpage/top_sales.jpg" alt="top_sales" /> </td>
 							<td> <img src="img/frontpage/plant_tree.jpg" alt="plant_tree" /> </td>
 							<td> <img src="img/frontpage/top_sales.jpg" alt="top_sales" /> </td>
-							<td> <img src="img/frontpage/plant_tree.jpg" alt="plant_tree" /> </td>
+							<td> <img src="img/frontpage/plant_tree_2.jpg" alt="plant_tree" /> </td>
 						</tr>
 					</table>
 					
@@ -118,9 +86,6 @@ $shoe = new Shoes();
 						</form>
 					</div>
 				</div>
-			</div>
-			
-			<div id="footer"
-			
-		</div>
+			</div>  <!-- end wrapper -->
+
 	</body>

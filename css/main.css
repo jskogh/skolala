@@ -229,9 +229,36 @@ h1,h2, h3, h4 {
 	margin-right: 30px;
 }
 
+#products td {
+	text-align: center;
+}
+
 #products img {
-	width: 200px;
+	width: 300px;
 	
+}
+
+.product_title {
+	padding-left: 15px;
+}
+
+.product_price {
+	padding-left: 55px;
+}
+
+#products input[type="submit"] {
+	height: 25px;
+	width: 110px;
+	border: 0px;
+	margin-left: 20px;
+	margin-top: 10px;
+	background-color: #9adaac;
+	color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
 

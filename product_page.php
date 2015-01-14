@@ -1,48 +1,15 @@
 <?php
-use app\models\User;
-use app\models\Shoes;
-use app\DB;
-
-require_once 'app/start.php';
+	use app\models\User;
+	use app\models\Shoes;
+	use app\DB;
+	
+	require_once 'app/start.php';
+	
+include("incl/header.php");
 
 $shoes = new Shoes();
 
 ?>
-
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title> Skolala || Ekologiska skor </title>
-		<link href="css/main.css" rel="stylesheet" type="text/css" />
-		<link href="css/reset.css" rel="stylesheet" type="text/css" />
-		<script src="js/slideshow.js" > </script>
-	</head>
-	
-	<body>
-		<div id="wrapper">
-			<div id="header">
-				<div id="logo">
-					<!-- <img src="img/logo.png" alt="logotype" width="105px" height="115px"/> -->
-					<h1>Skolala</h1>
-				</div>
-				
-				<div id="navbar">
-				
-					<ul>
-						<li href="">Boats</li>
-						<li href="">Sneakers</li>
-						<li href="">Sale</li>
-
-					</ul>
-					
-					<div id="shopping_cart">
-					
-					</div>
-					
-				</div>
-				
-			</div>
 			
             <div id="slideshow">
     	        <img id="slideshowImg" src="img/slideshow/01.png" name="slideshow" />
@@ -74,7 +41,20 @@ $shoes = new Shoes();
 								echo "<td><img src='img/shoes/" . $shoe->pic1 . "'" .  "alt='shoe1'/></td>";
 							}
 							?>
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
+							<td>
+								<p>
+									<img src="img/shoes/img_01.png" alt="shoe1" /> 
+								</p>
+								
+								<p>
+									<span class="product_title"> Sko ett </span> <span class="product_price"> 1199:- </span>
+								</p>
+								
+								<p>
+									<input type="submit" name="add_to_cart_product_page" value="Lägg i varukorg" /> 
+								</p>
+							</td>
+							
 							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
 						</tr>
 						
@@ -96,4 +76,6 @@ $shoes = new Shoes();
 					
 				</div>
 			
-			</div>
+			</div>  <!-- end wrapper -->
+			
+		</body>
