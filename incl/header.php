@@ -1,6 +1,6 @@
 <?php
 
-	session_start();
+
 	if ( ! $_SESSION['skolalaUser']) {
 		$_SESSION['skolalaUser'] = 'visitor';
 	}
@@ -13,6 +13,9 @@
 		<title> Skolala || Ekologiska skor </title>
 		<link href="css/main.css" rel="stylesheet" type="text/css" />
 		<link href="css/reset.css" rel="stylesheet" type="text/css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/shopping_cart.js" type="text/javascript" > </script>
+		<script src="js/slideshow.js" type="text/javascript" > </script>
 	</head>
 	
 	<body>
@@ -34,7 +37,11 @@
 					</ul>
 						
 					<div id="shopping_cart">
+						<a id="rollDown"><img class="shopping_cart_img" src="img/icons/shopping_cart.png" alt="shopping_cart_logo" /></a>
 						
+						<div id="shopping_cart_preview">
+						
+						</div>
 					</div>
 					
 				</div>

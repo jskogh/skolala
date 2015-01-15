@@ -3,16 +3,18 @@
 	use app\models\Shoes;
 	use app\DB;
 	
+
 	require_once 'app/start.php';
-	
+
 
 
 $shoes = new Shoes();
+	
 
 ?>
 
 
-			<?php include("incl/header.php"); var_dump($_SESSION['skolalaUser']) ?>
+			<?php 	include("incl/header.php"); ?>
 
             <div id="slideshow">
     	        <img id="slideshowImg" src="img/slideshow/01.png" name="slideshow" />
