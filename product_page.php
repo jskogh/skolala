@@ -15,8 +15,8 @@ $shoes = new Shoes();
 
 
 
-			
 
+			<?php include("incl/header.php"); ?>
             <div id="slideshow">
     	        <img id="slideshowImg" src="img/slideshow/01.png" name="slideshow" />
             </div>
