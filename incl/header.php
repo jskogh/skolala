@@ -21,17 +21,13 @@ if ( isset($_POST['add_to_cart']) ) {
 }
 
 if ( isset($_POST['remove_from_cart']) ) {
-
-    $counter = 0;
-    var_dump(get_object_vars($_SESSION['shopping_cart'][$counter]));
-    foreach ($_SESSION['shopping_cart'] as $shoeObj) {
-
-        if ( get_object_vars($_SESSION['shopping_cart'][$counter])['id'] == $_POST['shoe_id'] ) {
-            $indexPos = array_keys($_SESSION['shopping_cart'])[$counter];
-            unset($_SESSION['shopping_cart'][$indexPos]);
-		}
-        $counter++;
- 	}
+    if ( isset( $_SESSION['shopping_cart'][$_POST['shoe_id']]) ) {
+        if ( $_SESSION['shopping_cart'][$_POST['shoe_id']]['amount'] > 1 ) {
+            $_SESSION['shopping_cart'][$_POST['shoe_id']]['amount'] -= 1;
+        }else {
+            unset($_SESSION['shopping_cart'][$_POST['shoe_id']]);
+        }
+    }
 }
 
 
