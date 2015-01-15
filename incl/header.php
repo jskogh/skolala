@@ -1,9 +1,36 @@
 <?php
 
-	session_start();
-	if ( ! $_SESSION['skolalaUser']) {
-		$_SESSION['skolalaUser'] = 'visitor';
+use app\models\User;
+use app\models\Shoes;
+use app\DB;
+
+$db = DB::get();
+
+$shoe = new Shoes();
+
+if ( ! $_SESSION['user'] ) {
+	$_SESSION['user'] = 'visitor';
+	$_SESSION['shopping_cart'] = [];
+}
+
+if ( isset($_POST['add_to_cart']) ) {
+	$_SESSION['shopping_cart'][] = $shoes->get($_POST['shoe_id']);
+}
+
+if ( isset($_POST['remove_from_cart']) ) {
+
+	$counter = 0;
+
+	foreach ($_SESSION['shopping_cart'] as $shoeObj) {
+
+		if (array_values($_SESSION['shopping_cart'])[$counter]->id == $_POST['shoe_id'] ) {
+			$indexPos = array_keys($_SESSION['shopping_cart'])[$counter];
+			unset($_SESSION['shopping_cart'][$indexPos]);
+		}
+		$counter++;
 	}
+}
+
 
 ?>
 <!DOCTYPE HTML>
