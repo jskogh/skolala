@@ -3,15 +3,18 @@
 use app\models\User;
 use app\models\Shoes;
 use app\DB;
+// Using this header as a main file for isset stuff. since this is included in all pages
 
 $db = DB::get();
 $shoes = new Shoes();
 
+// set visitor Session
 if ( ! $_SESSION['user'] ) {
-    	$_SESSION['user'] = 'visitor';
-    	$_SESSION['shopping_cart'] = [];
-    }
+    $_SESSION['user'] = 'visitor';
+    $_SESSION['shopping_cart'] = [];
+}
 
+// Add to shopping cart
 if ( isset($_POST['add_to_cart']) ) {
     if ( array_key_exists($_POST['shoe_id'], $_SESSION['shopping_cart']) ) {
         $_SESSION['shopping_cart'][$_POST['shoe_id']]['amount'] += 1;
@@ -20,6 +23,7 @@ if ( isset($_POST['add_to_cart']) ) {
     }
 }
 
+// delete from shopping cart
 if ( isset($_POST['remove_from_cart']) ) {
     if ( isset( $_SESSION['shopping_cart'][$_POST['shoe_id']]) ) {
         if ( $_SESSION['shopping_cart'][$_POST['shoe_id']]['amount'] > 1 ) {
