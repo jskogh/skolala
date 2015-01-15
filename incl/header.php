@@ -5,7 +5,7 @@ use app\models\Shoes;
 use app\DB;
 
 $db = DB::get();
-$shoe = new Shoes();
+$shoes = new Shoes();
 
 if ( ! $_SESSION['user'] ) {
     	$_SESSION['user'] = 'visitor';
@@ -13,20 +13,24 @@ if ( ! $_SESSION['user'] ) {
     }
 
 if ( isset($_POST['add_to_cart']) ) {
-    	$_SESSION['shopping_cart'][] = $shoes->get($_POST['shoe_id']);
+    if ( array_key_exists($_POST['shoe_id'], $_SESSION['shopping_cart']) ) {
+        $_SESSION['shopping_cart'][$_POST['shoe_id']]['amount'] += 1;
+    } else {
+        $_SESSION['shopping_cart'][$_POST['shoe_id']] = ['amount' => 1];
     }
+}
 
 if ( isset($_POST['remove_from_cart']) ) {
 
-    	$counter = 0;
+    $counter = 0;
+    var_dump(get_object_vars($_SESSION['shopping_cart'][$counter]));
+    foreach ($_SESSION['shopping_cart'] as $shoeObj) {
 
-    	foreach ($_SESSION['shopping_cart'] as $shoeObj) {
-
-        		if (array_values($_SESSION['shopping_cart'])[$counter]->id == $_POST['shoe_id'] ) {
-            			$indexPos = array_keys($_SESSION['shopping_cart'])[$counter];
-            			unset($_SESSION['shopping_cart'][$indexPos]);
+        if ( get_object_vars($_SESSION['shopping_cart'][$counter])['id'] == $_POST['shoe_id'] ) {
+            $indexPos = array_keys($_SESSION['shopping_cart'])[$counter];
+            unset($_SESSION['shopping_cart'][$indexPos]);
 		}
-		$counter++;
+        $counter++;
  	}
 }
 

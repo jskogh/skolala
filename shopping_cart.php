@@ -5,7 +5,7 @@ use app\DB;
 
 require_once 'app/start.php';
 
-$shoes = new Shoes();
+$shoe = new Shoes()
 
 ?>
 
@@ -16,16 +16,18 @@ $shoes = new Shoes();
             <h3>Products</h3>
             <ul>
                 <?php
-                    foreach ($_SESSION['shopping_cart'] as $shoe) {
+                    foreach (array_keys($_SESSION['shopping_cart']) as $shoeId) {
+                        $amount = $_SESSION['shopping_cart'][$shoeId]['amount'];
                         echo "<li style='display: block; margin-top: 20px;'>
                                 <p>
-                                    <img style='width: 100px;' src='img/shoes/$shoe->pic1' alt='shoe1'/>
+                                    <img style='width: 100px;' src='img/shoes/".$shoe->get($shoeId)->pic1."' alt='shoe1'/>
                                 </p>
-                                <p>$shoe->product_name</p>
-                                <p>$shoe->price kr</p>
+                                <p>" .$shoe->get($shoeId)->product_name . "</p>
+                                <p>".$shoe->get($shoeId)->price." kr</p>
+                                <p>antal: $amount</p>
                                 <form method='post'>
                                     <input type='submit' name='remove_from_cart' value='remove'/>
-                                    <input type='hidden' name='shoe_id' value='$shoe->id' />
+                                    <input type='hidden' name='shoe_id' value='".$shoe->get($shoeId)->id."' />
                                 </form>
                             </li>";
                     }

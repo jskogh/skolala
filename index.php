@@ -4,9 +4,9 @@ use app\models\User;
 	use app\models\Shoes;
 	use app\DB;
 	
-require_once 'app/start.php';
+require_once 'app/start.php'; // all pages should include this.
 
-// using the included header.php to catch stuff and initialize objects
+// using the included header.php to catch stuff and initialize objects.
 
 ?>
 
