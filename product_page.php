@@ -14,7 +14,8 @@ $shoes = new Shoes();
 ?>
 
 
-			<?php 	include("incl/header.php"); ?>
+
+			
 
             <div id="slideshow">
     	        <img id="slideshowImg" src="img/slideshow/01.png" name="slideshow" />
@@ -41,40 +42,36 @@ $shoes = new Shoes();
 				
 					<table>
 						<tr>
-							<?php foreach ($shoes->all() as $shoe) {
+							<?php
+								$rowNumber = 1;
 
-								echo "<td><img src='img/shoes/" . $shoe->pic1 . "'" .  "alt='shoe1'/></td>";
+								foreach ($shoes->all() as $shoe) {
+
+
+									echo "<td>
+											<p>
+												<img src='img/shoes/$shoe->pic1' alt='shoe1'/>
+											</p>
+											<p>
+												<span class='product_title'> $shoe->product_name </span> <span class='product_price'> $shoe->price:- </span>
+											</p>
+
+
+												<form method='post'>
+												<p>
+													<input type='hidden' name='shoe_id' value='$shoe->id' />
+													<input type='submit' name='add_to_cart' value='Lägg i varukorg' />
+													</p>
+												</form>
+
+										</td>";
+										if ( $rowNumber % 3 === 0) { // create new <tr> every third shoe
+											echo "</tr><tr>";
+										}
+
+								$rowNumber++;
 							}
 							?>
-							<td>
-								<p>
-									<img src="img/shoes/img_01.png" alt="shoe1" /> 
-								</p>
-								
-								<p>
-									<span class="product_title"> Sko ett </span> <span class="product_price"> 1199:- </span>
-								</p>
-								
-								<p>
-									<input type="submit" name="add_to_cart_product_page" value="Lägg i varukorg" /> 
-								</p>
-							</td>
-							
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
-						</tr>
-						
-						<tr> 
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
-						</tr>
-						
-						<tr> 
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
 						</tr>
 						
 					</table>

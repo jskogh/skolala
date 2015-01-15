@@ -5,8 +5,6 @@ use app\DB;
 
 require_once 'app/start.php';
 
-$shoes = new Shoes();
-
 ?>
 
     <?php include("incl/header.php"); ?>

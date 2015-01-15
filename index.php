@@ -1,16 +1,12 @@
 <?php
-	use app\models\User;
+
+use app\models\User;
 	use app\models\Shoes;
 	use app\DB;
 	
-	require_once 'app/start.php';
+require_once 'app/start.php';
 
-
-
-$test = new User();
-$db = DB::get();
-
-$shoe = new Shoes();
+// using the included header.php to catch stuff and initialize objects
 
 ?>
 
