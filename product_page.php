@@ -1,49 +1,22 @@
 <?php
-use app\models\User;
-use app\models\Shoes;
-use app\DB;
+	use app\models\User;
+	use app\models\Shoes;
+	use app\DB;
+	
 
-require_once 'app/start.php';
+	require_once 'app/start.php';
+
+
 
 $shoes = new Shoes();
+	
 
 ?>
 
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title> Skolala || Ekologiska skor </title>
-		<link href="css/main.css" rel="stylesheet" type="text/css" />
-		<link href="css/reset.css" rel="stylesheet" type="text/css" />
-		<script src="js/slideshow.js" > </script>
-	</head>
-	
-	<body>
-		<div id="wrapper">
-			<div id="header">
-				<div id="logo">
-					<!-- <img src="img/logo.png" alt="logotype" width="105px" height="115px"/> -->
-					<h1>Skolala</h1>
-				</div>
-				
-				<div id="navbar">
-				
-					<ul>
-						<li href="">Boats</li>
-						<li href="">Sneakers</li>
-						<li href="">Sale</li>
 
-					</ul>
-					
-					<div id="shopping_cart">
-					
-					</div>
-					
-				</div>
-				
-			</div>
+
 			
+
             <div id="slideshow">
     	        <img id="slideshowImg" src="img/slideshow/01.png" name="slideshow" />
             </div>
@@ -69,31 +42,42 @@ $shoes = new Shoes();
 				
 					<table>
 						<tr>
-							<?php foreach ($shoes->all() as $shoe) {
+							<?php
+								$rowNumber = 1;
 
-								echo "<td><img src='img/shoes/" . $shoe->pic1 . "'" .  "alt='shoe1'/></td>";
+								foreach ($shoes->all() as $shoe) {
+
+
+									echo "<td>
+											<p>
+												<img src='img/shoes/$shoe->pic1' alt='shoe1'/>
+											</p>
+											<p>
+												<span class='product_title'> $shoe->product_name </span> <span class='product_price'> $shoe->price:- </span>
+											</p>
+
+
+												<form method='post'>
+												<p>
+													<input type='hidden' name='shoe_id' value='$shoe->id' />
+													<input type='submit' name='add_to_cart' value='Lägg i varukorg' />
+													</p>
+												</form>
+
+										</td>";
+										if ( $rowNumber % 3 === 0) { // create new <tr> every third shoe
+											echo "</tr><tr>";
+										}
+
+								$rowNumber++;
 							}
 							?>
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
-						</tr>
-						
-						<tr> 
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
-						</tr>
-						
-						<tr> 
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_01.png" alt="shoe1" /> </td>
-							<td> <img src="img/shoes/img_02.png" alt="shoe1" /> </td>
 						</tr>
 						
 					</table>
 					
 				</div>
 			
-			</div>
+			</div>  <!-- end wrapper -->
+			
+		</body>
