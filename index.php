@@ -24,42 +24,17 @@ require_once 'app/start.php'; // all pages should include this.
 				-->
 				
 				<div id="four_columns">
-				
-					<table>
-						<tr>
-							<td> <img src="img/frontpage/top_sales.jpg" alt="top_sales" /> </td>
-							<td> <img src="img/frontpage/plant_tree.jpg" alt="plant_tree" /> </td>
-							<td> <img src="img/frontpage/top_sales.jpg" alt="top_sales" /> </td>
-							<td> <img src="img/frontpage/plant_tree_2.jpg" alt="plant_tree" /> </td>
-						</tr>
-					</table>
-					
-				</div>
-				<!-- <div id="two_categories_top">
-					
-					<a href="#">
-						<div id="category_one">
-							<h2>Urban </h2>
-							</div>
-					</a>
-					<a href="#">
-						<div id="category_two">
-							<h2>Adventure </h2>
+					<div id="plant_tree">
+						<div id="plant_tree_text">
+							<p>Kompensera för ditt köpt, <br /> plantera ett träd </p>
 						</div>
-					</a>
+					</div>
 				</div>
-				
-				
-				<div id="top_offers">
-					<h2 class="offers"> BUY A PAIR OF SHOES WITHOUT MAKING ANY HARM </h2>
-				</div>
-			
-				
+								
 				<div id="environment_link">
 				
 				</div>
 				
-				-->
 					
 				<div id="social_media_container">
 		
