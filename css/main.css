@@ -86,6 +86,9 @@ h1,h2, h3, h4 {
 	display: inline-block;
 }
 
+
+/** FRONT PAGE **/
+
 #content {
 	display: inline-block;
 	width: 100%;
@@ -93,30 +96,15 @@ h1,h2, h3, h4 {
 	
 }
 
-#two_categories_top {
-	width: 1000px;
-	margin: 0 auto;
-}
-
-#category_one {
-	background: url("../img/urban.jpg");
-	width: 430px;
-	height: 600px;
-	margin-right: 50px;
-	display: inline-block;
-}
-
-#category_two {
-	background: url("../img/adventure.jpg");
-	height: 600px;
-	width: 430px;
-	display: inline-block;	
-}
-
 #four_columns {
 	width: 1100px;
 	margin: 0 auto;
 	margin-bottom: 30px;
+	color: #fff;
+	font-weight: 200;
+	font-size: 30px;
+	text-align: center;
+		margin-top: 70px;
 }
 
 #four_columns img {
@@ -141,12 +129,9 @@ h1,h2, h3, h4 {
 
 }
 
+
 #footer {
 	background: #e2e8e5;
-}
-
-.offers {
-	color: #fff;
 }
 
 #social_media_container {
@@ -193,8 +178,58 @@ h1,h2, h3, h4 {
 	text-transform: uppercase;
 }
 
+#plant_tree {
+	background: url("../img/frontpage/plant_tree_2.jpg");
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 400px;
+}
+
+#plant_tree_text {
+	padding-top: 60px;
+	text-shadow: 5px 3px 12px rgba(0,0,0,0.55);
+}
+
+/** ABOUT PAGE **/
+
+
+#about {
+	width: 1100px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	border-bottom: 1px solid rgba(0,0,0,0.32);
+	
+}
+
+#contact_field {
+	vertical-align: top;
+	width: 350px;
+	margin-left: 150px;
+	display: inline-block;	
+}
+
+#about_text {
+	width: 500px;	
+	text-transform: none;
+	display: inline-block;
+}
+
+.about_title {
+	font-size: 36px;
+	text-transform: uppercase;
+}
+
+.margin_top {
+	margin-top: 20px;
+	font-weight: 400;
+}
+
+.bold {
+	font-weight: 400;
+}
 
 /** PRODUCT PAGE **/
+
 #slideshow {
 	width: 1100px;
 	margin: 0 auto;
@@ -367,13 +402,14 @@ h1,h2, h3, h4 {
 	
 }
 
-#product_info p {
+p {
 	margin-bottom: 10px;
 	line-height: 130%;
 }
 
 .product_name {
 	font-size: 36px;	
+	text-transform: uppercase;
 }
 
 .about_product {
