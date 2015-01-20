@@ -1,5 +1,4 @@
 <?php
-
 use app\models\User;
 use app\models\Shoes;
 use app\DB;
@@ -8,32 +7,6 @@ use app\DB;
 $db = DB::get();
 $shoes = new Shoes();
 $shoe = new Shoes();
-// set visitor Session
-if ( ! $_SESSION['user'] ) {
-    $_SESSION['user'] = 'visitor';
-    $_SESSION['shopping_cart'] = [];
-}
-
-// Add to shopping cart
-if ( isset($_POST['add_to_cart']) ) {
-    if ( array_key_exists($_POST['shoe_id'], $_SESSION['shopping_cart']) ) {
-        $_SESSION['shopping_cart'][$_POST['shoe_id']]['amount'] += 1;
-    } else {
-        $_SESSION['shopping_cart'][$_POST['shoe_id']] = ['amount' => 1];
-    }
-}
-
-// delete from shopping cart
-if ( isset($_POST['remove_from_cart']) ) {
-    if ( isset( $_SESSION['shopping_cart'][$_POST['shoe_id']]) ) {
-        if ( $_SESSION['shopping_cart'][$_POST['shoe_id']]['amount'] > 1 ) {
-            $_SESSION['shopping_cart'][$_POST['shoe_id']]['amount'] -= 1;
-        }else {
-            unset($_SESSION['shopping_cart'][$_POST['shoe_id']]);
-        }
-    }
-}
-
 
  ?>
 <!DOCTYPE HTML>
@@ -46,6 +19,7 @@ if ( isset($_POST['remove_from_cart']) ) {
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/shopping_cart.js" type="text/javascript" > </script>
     <script src="js/slideshow.js" type="text/javascript" > </script>
+    <script src="js/main.js" type="text/javascript" > </script>
 </head>
 
 <body>
@@ -76,15 +50,15 @@ if ( isset($_POST['remove_from_cart']) ) {
                             <?php
                             foreach (array_keys($_SESSION['shopping_cart']) as $shoeId) {
                                 $amount = $_SESSION['shopping_cart'][$shoeId]['amount'];
-                                echo "<li style='display: block; margin-top: 20px;'>
+                                echo "<li class='menu_shopping_cart' style='display: block; margin-top: 20px;'>
                                 <p>
                                     <img style='width: 100px;' src='img/shoes/".$shoe->get($shoeId)->pic1."' alt='shoe1'/>
                                 </p>
                                 <p>" .$shoe->get($shoeId)->product_name . "</p>
                                 <p>".$shoe->get($shoeId)->price." kr</p>
-                                <p>antal: $amount</p>
+                                <p>antal: <span>$amount</span></p>
                                 <form method='post'>
-                                    <input type='submit' name='remove_from_cart' value='remove'/>
+                                    <input class='remove-from-cart' type='submit' name='remove_from_cart' value='remove'/>
                                     <input type='hidden' name='shoe_id' value='".$shoe->get($shoeId)->id."' />
                                 </form>
                             </li>";
