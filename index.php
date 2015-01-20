@@ -14,28 +14,21 @@ require_once 'app/start.php'; // all pages should include this.
 
 			<div id="content">
 				
-				<div id="about_link">
-					<img src="img/frontpage/alt_header.jpg" alt="slogan" />
+				<div id="top_content">
+					Shoes Eco <br/>
+					<a href="product_page.php">Börja här </a>
 				</div>
-				<!-- 
-				<div id="shoes_link">
-					<img src="img/frontpage/shoes.jpg" alt="shoes" />
-				</div>
-				-->
 				
-				<div id="four_columns">
-					<div id="plant_tree">
-						<div id="plant_tree_text">
-							<p>Kompensera för ditt köpt, <br /> plantera ett träd </p>
-						</div>
-					</div>
-				</div>
-								
 				<div id="environment_link">
-				
+					<p> Miljötips #1 : </p>
+					<p class="margin_bottom"> Lämna dina gamla och hela saker till second hand eller sälj dem på internet istället för att slänga dem. </p> 
+					<p> <a href="blogg.php">läs mer på vår miljöblogg </a></p>
 				</div>
 				
-					
+				<div id="philosophy">
+					<p> vår filosofi </p>
+				</div>
+				
 				<div id="social_media_container">
 		
 					<div id="social_media_logos">
@@ -58,6 +51,31 @@ require_once 'app/start.php'; // all pages should include this.
 						</form>
 					</div>
 				</div>
-			</div>  <!-- end wrapper -->
-
-	</body>
+			
+							
+				
+				<!-- <div id="two_col">
+				
+					<div id="philosophy"
+						<p> vår filosofi </p>
+					</div>
+					
+					<div id="blogg">
+						<p> miljöbloggen </p>
+					</div>
+				
+				</div> 
+				
+				<div id="four_columns">
+					<div id="plant_tree">
+						<div id="plant_tree_text">
+							<p>Kompensera för ditt köpt, <br /> plantera ett träd </p>
+						</div>
+					</div>
+				</div>
+					-->
+	
+				
+			<?php include("incl/footer.php"); ?>
+				
+				
