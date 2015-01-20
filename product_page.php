@@ -1,8 +1,9 @@
 <?php
-	use app\models\User;
-	use app\models\Shoes;
-	use app\DB;
-	
+
+use app\models\User;
+use app\models\Shoes;
+use app\DB;
+
 require_once 'app/start.php';
 
 $shoes = new Shoes();
@@ -48,14 +49,12 @@ $shoes = new Shoes();
 											<p>
 												<span class='product_title'> $shoe->product_name </span> <span class='product_price'> $shoe->price:- </span>
 											</p>
-
-
-												<form method='post'>
+											<form method='post'>
 												<p>
+													<input class='add-to-cart' type='submit' name='add_to_cart' value='Lägg i varukorg' />
 													<input type='hidden' name='shoe_id' value='$shoe->id' />
-													<input type='submit' name='add_to_cart' value='Lägg i varukorg' />
-													</p>
-												</form>
+												</p>
+											</form>
 
 										</td>";
 										if ( $rowNumber % 3 === 0) { // create new <tr> every third shoe
