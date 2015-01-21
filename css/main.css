@@ -369,28 +369,29 @@ ul, li {
 	margin-right: 30px;
 }
 
+
 #products td {
 	text-align: center;
+	padding-bottom: 10px;
 }
+
+
 
 #products img {
 	width: 300px;
 	
 }
 
-.product_title {
-	padding-left: 15px;
-}
 
 .product_price {
-	padding-left: 55px;
+	font-weight: 400;
 }
 
 #products input[type="submit"] {
-	height: 25px;
+	height: 27px;
 	width: 110px;
 	border: 0px;
-	margin-left: 20px;
+	margin-left: 10px;
 	margin-top: 10px;
 	background-color: #9adaac;
 	color: #fff;
@@ -399,6 +400,21 @@ ul, li {
 	font-size: 13px;
 	text-transform: uppercase;
 	cursor: pointer;
+	border-radius: 4px;
+}
+
+#products select {
+	height: 27px;
+	width: 50px;
+	border: 0px;
+	margin-top: 10px;
+	color: #000;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	cursor: pointer;
+	
 }
 
 

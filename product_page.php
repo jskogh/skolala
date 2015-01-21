@@ -47,10 +47,16 @@ $shoes = new Shoes();
 												<img src='img/shoes/$shoe->pic1' alt='shoe1'/>
 											</p>
 											<p>
-												<span class='product_title'> $shoe->product_name </span> <span class='product_price'> $shoe->price:- </span>
+												<span class='product_title'> $shoe->product_name </span><br /> <span class='product_price'> $shoe->price:- </span>
 											</p>
 											<form method='post'>
-												<p>
+												<p>	
+													<select>
+														<option> 40 </option>
+														<option> 41 </option>
+														<option> 42 </option>
+														<option> 43 </option>
+													</select>
 													<input class='add-to-cart' type='submit' name='add_to_cart' value='Lägg i varukorg' />
 													<input type='hidden' name='shoe_id' value='$shoe->id' />
 												</p>

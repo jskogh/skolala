@@ -53,13 +53,8 @@ $shoes = new Shoes();
 										<option>42 </option>
 										<option>43 </option>
 									</select>
-									<select name="number_of_shoes">
-										<option>Antal </option>
-										<option>1 </option>
-										<option>2 </option>
-										<option>3 </option>
-										<option>4 </option>
-									</select> <br />
+									
+									<br />
 									
 									<input type="submit" value="Lägg till i varukorg" name="add_to_cart" />
 								</form>
