@@ -26,7 +26,7 @@ require_once 'app/start.php'; // all pages should include this.
 				</div>
 				
 				<div id="philosophy">
-					<p> vår filosofi </p>
+					<a href="philosophy.php"> <p> vår filosofi </p> </a>
 				</div>
 				
 				<div id="social_media_container">

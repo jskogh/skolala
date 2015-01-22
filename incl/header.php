@@ -13,7 +13,7 @@ $shoe = new Shoes();
 <html>
 <head>
     <meta charset="utf-8" />
-    <title> Skolala || Ekologiska skor </title>
+    <title> ECOSHOES </title>
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

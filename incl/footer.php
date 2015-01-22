@@ -1,8 +1,8 @@
 			<div id="footer">
 				<div id="important_links">
 					<ul>
-						<li>Om oss</li>
-						<li></li>
+						<li>Om oss  | </li>
+						<li>Plantera träd  | </li>
 						<li></li>
 						<li></li>
 						<li></li>

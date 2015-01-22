@@ -11,7 +11,7 @@ require_once 'app/start.php';
     
     <div id="about">
     	<div id="about_link">
-			<img src="img/frontpage/forest_3_1.jpg" alt="slogan" />
+			<img src="img/frontpage/forest_3_1.jpg" alt="about_image" />
 		</div>
     	
     	<div id="about_text">
