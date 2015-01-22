@@ -52,6 +52,7 @@ $shoes = new Shoes();
 											<form method='post'>
 												<p>	
 													<select>
+														<option> Strl </option>
 														<option> 40 </option>
 														<option> 41 </option>
 														<option> 42 </option>
@@ -75,7 +76,6 @@ $shoes = new Shoes();
 					</table>
 					
 				</div>
+			</div>
 			
-			</div>  <!-- end wrapper -->
-			
-		</body>
+			<?php include("incl/footer.php"); ?>

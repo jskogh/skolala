@@ -14,6 +14,15 @@ h1, h2, h3, h4 {
 	
 }
 
+a, a:hover, a:active a:visited {
+	font-style: none;
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: rgba(88,183,126,0.75);
+}
 
 #wrapper {
 	
@@ -80,7 +89,6 @@ h1, h2, h3, h4 {
 
 ul, li {
 	display: inline-block;
-	cursor: pointer;
 	
 }
 
@@ -88,12 +96,6 @@ ul, li {
 	padding: 5px 15px 10px 15px;
 
 }
-
-#navbar li:hover {
-	background:  rgba(88,183,126,0.75);
-}
-
-
 
 #shopping_cart {
 	margin-right: 20px;
@@ -186,7 +188,7 @@ ul, li {
 	margin-bottom: 2px;
 }
 
-#environment_link a, a:hover {
+#environment_link a, #environment_link a:hover {
 	border-bottom: 0px;
 	padding-top: 5px;
 	font-size: 14px;
@@ -194,7 +196,6 @@ ul, li {
 	vertical-align: top;
 	text-decoration: none;
 	cursor: pointer;
-	font-style: italic;
 }
 
 #environment_link a:hover {
@@ -405,7 +406,7 @@ ul, li {
 
 #products select {
 	height: 27px;
-	width: 50px;
+	width: 60px;
 	border: 0px;
 	margin-top: 10px;
 	color: #000;
@@ -416,7 +417,6 @@ ul, li {
 	cursor: pointer;
 	
 }
-
 
 
 /** SINGLE PRODUCT PAGE **/

@@ -27,16 +27,16 @@ $shoe = new Shoes();
     <div id="header">
 
         <div id="logo">	<!-- <img src="img/logo.png" alt="logotype" width="105px" height="115px"/> -->
-            <h1><span class="green">Eco</span>Shoes</h1>
+            <a href="index.php"> <h1><span class="green">Eco</span>Shoes</h1> </a>
         </div>
 
 
         <div id="navbar">
 
             <ul>
-                <li href="">Boots</li>
-                <li href="">Sneakers</li>
-                <li href="">Sale</li>
+                <a href="index.php"><li>Startsida</li></a>
+                <a href="product_page.php"><li>Shop</li></a>
+                <a href="about.php"><li>Om oss</li></a>
 
             </ul>
 
