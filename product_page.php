@@ -38,7 +38,7 @@ $shoes = new Shoes();
 						<tr>
 							<?php
 								$rowNumber = 1;
-
+								var_dump($_SESSION['shopping_cart']);
 								foreach ($shoes->all() as $shoe) {
 
 
@@ -49,18 +49,10 @@ $shoes = new Shoes();
 											<p>
 												<span class='product_title'> $shoe->product_name </span><br /> <span class='product_price'> $shoe->price:- </span>
 											</p>
-											<p class='options'>
-												<select name='shoe_size'>
-													<option>40 </option>
-													<option>41 </option>
-													<option>42 </option>
-													<option>43 </option>
-												</select>
-											</p>
+
 											<form method='post'>
-												<p>	
-													<select>
-														<option> Strl </option>
+												<p>
+													<select class='options'>
 														<option> 40 </option>
 														<option> 41 </option>
 														<option> 42 </option>

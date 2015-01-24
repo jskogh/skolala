@@ -15,7 +15,7 @@ require_once 'app/start.php';
             <ul>
                 <?php
                 if ( count($_SESSION['shopping_cart']) > 0 ) {
-                    foreach ( $_SESSION['shopping_cart'] as $shoeArray) {
+                    foreach ( array_reverse($_SESSION['shopping_cart']) as $shoeArray) {
                         echo "<li class='menu_shopping_cart' style='display: block; margin-top: 20px;'>
                                         <p>
                                             <img style='width: 100px;' src='img/shoes/" . $shoe->get($shoeArray['shoeId'])->pic1 . "' alt='shoe1'/>

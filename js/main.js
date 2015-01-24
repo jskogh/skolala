@@ -3,7 +3,8 @@ $(document).ready(function() {
     $('body').on('click', '.add-to-cart', function(e) {
         e.preventDefault();
         var product_id = $(this).next().val();
-        var size = $(this).parent().parent().prev().children().val();
+        var size = $(this).prev().val();
+        console.log(size);
         addToCart(product_id, size);
     });
 
@@ -55,7 +56,7 @@ function addToCart(product_id, size) {
         }else { // if item DOES NOT exist in shopping cart, add it.
             console.log("else");
             console.log(shoe.attr.amount);
-            $('#checkout_summary ul').append(
+            $('#checkout_summary ul').prepend(
                 $('<li>', {class: "menu_shopping_cart", style: "display: block; margin-top: 20px;"}).append(
                     '<p><img style="width: 100px;" src="img/shoes/' + shoe.prop.pic1 + '"  alt="shoe1"/></p>',
                     '<p>' + shoe.prop.product_name + '</p>',

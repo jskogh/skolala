@@ -10,6 +10,7 @@ class ShoppingCart {
 
         $match = false;
         if ( count($_SESSION['shopping_cart']) > 0 ) {
+            $_SESSION['shopping_cart'] = array_values( $_SESSION['shopping_cart']);
             foreach ( $_SESSION['shopping_cart'] as $key => $shoeArray ) {
                 if ( ($_SESSION['shopping_cart'][$key]['shoeId'] == $shoeId) && ($_SESSION['shopping_cart'][$key]['size'] == $size) ) {
 
@@ -47,6 +48,7 @@ class ShoppingCart {
     }
 
     public function removeFromCart($shoeId, $size) {
+        $_SESSION['shopping_cart'] = array_values( $_SESSION['shopping_cart']);
 
         foreach ( $_SESSION['shopping_cart'] as $key => $shoeArray ) {
             if ( ($_SESSION['shopping_cart'][$key]['shoeId'] == $shoeId) && ($_SESSION['shopping_cart'][$key]['size'] == $size) ) {
