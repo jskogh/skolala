@@ -50,46 +50,24 @@ class ShoppingCart {
     public function removeFromCart($shoeId, $size) {
         $_SESSION['shopping_cart'] = array_values( $_SESSION['shopping_cart']);
 
-        foreach ( $_SESSION['shopping_cart'] as $key => $shoeArray ) {
-            if ( ($_SESSION['shopping_cart'][$key]['shoeId'] == $shoeId) && ($_SESSION['shopping_cart'][$key]['size'] == $size) ) {
+        $idKey = array_search($shoeId, $_SESSION['shopping_cart']);
+        $sizeKey = array_search($size, $_SESSION['shopping_cart']);
 
-                if ( $_SESSION['shopping_cart'][$key]['amount'] <= 1 ) {
-                    unset($_SESSION['shopping_cart'][$key]);
-                    echo json_encode(false);
+        if ( $idKey ==  $sizeKey) {
+            if ( $_SESSION['shopping_cart'][$idKey]['amount'] <= 1 ) {
+                unset($_SESSION['shopping_cart'][$idKey]);
+                echo json_encode(false);
 
-                }else {
-                    $_SESSION['shopping_cart'][$key]['amount'] -= 1;
+            }else {
+                $_SESSION['shopping_cart'][$idKey]['amount'] -= 1;
 
-                    $result[] = [
-                        'amount' => $_SESSION['shopping_cart'][$key]['amount'],
-                        'size' => $_SESSION['shopping_cart'][$key]['size']
-                    ];
-                    echo json_encode($result);
-                }
+                $result[] = [
+                    'amount' => $_SESSION['shopping_cart'][$idKey]['amount'],
+                    'size' => $_SESSION['shopping_cart'][$idKey]['size']
+                ];
+                echo json_encode($result);
             }
         }
-
-
-
-      /*  if ( ! $match ) {
-            if ($_SESSION['shopping_cart'] < 1) {
-                unset($_SESSION['shopping_cart'][$matchedKey]);
-                echo json_encode(false);
-            }
-        }*/
-        /*if (isset($_SESSION['shopping_cart'][$shoeId])) {
-            if ($_SESSION['shopping_cart'][$shoeId]['amount'] > 1) {
-
-                $_SESSION['shopping_cart'][$shoeId]['amount'] -= 1;
-                $result = $_SESSION['shopping_cart'][$shoeId]['amount'];
-                echo json_encode($result);
-
-            } else {
-                unset($_SESSION['shopping_cart'][$shoeId]);
-                echo json_encode(false);
-            }
-
-        }*/
     }
 
 }

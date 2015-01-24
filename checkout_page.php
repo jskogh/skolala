@@ -5,6 +5,9 @@ use app\DB;
 
 require_once 'app/start.php';
 
+if ( $_SESSION['user'] != "logged" ) {
+    header("location: login.php");
+}
 ?>
 
     <?php include("incl/header.php"); ?>

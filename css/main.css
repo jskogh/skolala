@@ -77,14 +77,13 @@ a:hover {
 
 #shopping_cart_preview {
 	position: absolute;
-	right: 0;	
+	right: 0;
 	margin-top: 10px;
 	height: 400px;
-	width: 250px;
 	display: none;
 	background-color: #fff;
 	border-bottom: 1px solid rgba(88,183,126,0.75);
-	
+	overflow-y: auto;
 }
 
 ul, li {

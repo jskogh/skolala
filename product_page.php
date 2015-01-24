@@ -38,7 +38,6 @@ $shoes = new Shoes();
 						<tr>
 							<?php
 								$rowNumber = 1;
-								var_dump($_SESSION['shopping_cart']);
 								foreach ($shoes->all() as $shoe) {
 
 
