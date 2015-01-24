@@ -49,6 +49,14 @@ $shoes = new Shoes();
 											<p>
 												<span class='product_title'> $shoe->product_name </span> <span class='product_price'> $shoe->price:- </span>
 											</p>
+											<p class='options'>
+												<select name='shoe_size'>
+													<option>40 </option>
+													<option>41 </option>
+													<option>42 </option>
+													<option>43 </option>
+												</select>
+											</p>
 											<form method='post'>
 												<p>
 													<input class='add-to-cart' type='submit' name='add_to_cart' value='Lägg i varukorg' />
