@@ -47,15 +47,13 @@ $shoes = new Shoes();
 							<p class="options">
 								<form>
 									<select name="shoe_size">
-										<option>Storlek </option>
 										<option>40 </option>
 										<option>41 </option>
 										<option>42 </option>
 										<option>43 </option>
 									</select>
-									
 									<br />
-									
+
 									<input type="submit" value="Lägg till i varukorg" name="add_to_cart" />
 								</form>
 							</p>

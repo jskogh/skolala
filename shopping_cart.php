@@ -14,21 +14,23 @@ require_once 'app/start.php';
             <h3>Products</h3>
             <ul>
                 <?php
-                    foreach (array_keys($_SESSION['shopping_cart']) as $shoeId) {
-                        $amount = $_SESSION['shopping_cart'][$shoeId]['amount'];
-                        echo "<li style='display: block; margin-top: 20px;'>
-                                <p>
-                                    <img style='width: 100px;' src='img/shoes/".$shoe->get($shoeId)->pic1."' alt='shoe1'/>
-                                </p>
-                                <p>" .$shoe->get($shoeId)->product_name . "</p>
-                                <p>".$shoe->get($shoeId)->price." kr</p>
-                                <p>antal: $amount</p>
-                                <form method='post'>
-                                    <input type='submit' name='remove_from_cart' value='remove'/>
-                                    <input type='hidden' name='shoe_id' value='".$shoe->get($shoeId)->id."' />
-                                </form>
-                            </li>";
+                if ( count($_SESSION['shopping_cart']) > 0 ) {
+                    foreach ( $_SESSION['shopping_cart'] as $shoeArray) {
+                        echo "<li class='menu_shopping_cart' style='display: block; margin-top: 20px;'>
+                                        <p>
+                                            <img style='width: 100px;' src='img/shoes/" . $shoe->get($shoeArray['shoeId'])->pic1 . "' alt='shoe1'/>
+                                        </p>
+                                        <p>" . $shoe->get($shoeArray['shoeId'])->product_name . "</p>
+                                        <p>" . $shoe->get($shoeArray['shoeId'])->price . " kr</p>
+                                        <p class='shoe-attr-size'>Storlek: <span>" . $shoeArray['size'] . "</span></p>
+                                        <p class='shoe-attr-amount'>antal: <span>" . $shoeArray['amount'] . "</span></p>
+                                        <form method='post'>
+                                            <input class='remove-from-cart' type='submit' name='remove_from_cart' value='remove'/>
+                                            <input type='hidden' name='shoe_id' value='" . $shoe->get($shoeArray['shoeId'])->id . "' />
+                                        </form>
+                                    </li>";
                     }
+                }
                 ?>
             </ul>
             <form action="" method="post">
