@@ -5,9 +5,8 @@ use app\models\Shoes;
 use app\DB;
 
 require_once 'app/start.php';
+require_once 'util.php';
 
-$shoes = new Shoes();
-	
 ?>
 
 			<?php include("incl/header.php"); ?>
@@ -31,27 +30,29 @@ $shoes = new Shoes();
 						<li> Underrubrik </li>
 					</ul>
 				</div>
-				
+
 				<div id="products">
 				
 					<table>
 						<tr>
 							<?php
 								$rowNumber = 1;
+
 								foreach ($shoes->all() as $shoe) {
 
 
-									echo "<td>
+									echo "<td><a href='single_item_page.php?product-id=" . $shoe->id . "'>
 											<p>
 												<img src='img/shoes/$shoe->pic1' alt='shoe1'/>
 											</p>
 											<p>
 												<span class='product_title'> $shoe->product_name </span><br /> <span class='product_price'> $shoe->price:- </span>
-											</p>
+											</p></a>
 
 											<form method='post'>
 												<p>
 													<select class='options'>
+														<option value='40'> Strl </option>
 														<option> 40 </option>
 														<option> 41 </option>
 														<option> 42 </option>

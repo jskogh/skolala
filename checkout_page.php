@@ -5,7 +5,10 @@ use app\DB;
 
 require_once 'app/start.php';
 
+$shoes = new Shoes();
+
 if ( $_SESSION['user'] != "logged" ) {
+    $_SESSION['targetUrl'] = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     header("location: login.php");
 }
 ?>

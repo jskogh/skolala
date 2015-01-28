@@ -3,13 +3,12 @@
 	use app\models\Shoes;
 	use app\DB;
 	
-
-	require_once 'app/start.php';
-
-
-
+require_once 'app/start.php';
 $shoes = new Shoes();
-	
+
+if ( isset($_GET['product-id']) ) {
+	$product_id = $_GET['product-id'];
+}
 
 ?>
 
@@ -20,41 +19,43 @@ $shoes = new Shoes();
 					<div id="product">
 				
 						<div id="product_image">
-							<img src="img/shoes/img_01.png" alt="product" />
+							<img src="img/shoes/<?php echo $shoes->get($product_id)->pic1 ?>" alt="product" />
 							
 							<div id="more_images">
-								<img src="img/shoes/img_01_02.png" alt ="shoe1" /> 
-								<img src="img/shoes/img_01_03.png" alt ="shoe2" /> 
-								<img src="img/shoes/img_01.png" alt ="shoe3" /> 
+								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic1 ?>" alt ="shoe1" />
+								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic1 ?>" alt ="shoe2" />
+								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic1 ?>" alt ="shoe3" />
 							</div>
 							
 							
 						</div>
 						
 						<div id="product_info">
-							<p class="product_name"> SkoEtt </p>
+							<p class="product_name"> <?php echo $shoes->get($product_id)->product_name ?> </p>
 							
-							<p class="brand"> Märke: Kavat </p>
+							<p class="brand"> Märke: <?php echo $shoes->get($product_id)->brand_name ?> </p>
 							
-							<p class="materials"> Material: Läder, Skinn </p>
+							<p class="categories"> Kategori: <?php echo $shoes->get($product_id)->categories ?> </p>
 							
-							<p class="about_product"> Massa om skon lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed blandit sem. Nam lacinia quis sem tempus cursus. Duis sed ipsum nec sem laoreet vulputate. Maecenas porta, urna ac dapibus porttitor, massa quam placerat nisi, et mollis ligula mi ac purus. Phasellus risus est, dictum ac est sed, rutrum imperdiet ipsum. Curabitur ac lorem in sem egestas laoreet. Vestibulum tincidunt pharetra lacinia </p>
+							<p class="about_product"> <?php echo $shoes->get($product_id)->description ?> </p>
 							
-							<p class="environment_info"> Påverkan på miljön: 1478 blabla utsläppt </p>
+							<p class="environment_info"> Påverkan på miljön: 1200 microgram utsläppt </p>
 							
-							<p class="price"> 1299 SEK </p>
+							<p class="price"> <?php echo $shoes->get($product_id)->price ?> SEK </p>
 							
 							<p class="options">
 								<form>
 									<select name="shoe_size">
-										<option>40 </option>
-										<option>41 </option>
-										<option>42 </option>
-										<option>43 </option>
+										<option value='40'> Strl </option>
+										<option> 40 </option>
+										<option> 41 </option>
+										<option> 42 </option>
+										<option> 43 </option>
 									</select>
-									<br />
 
-									<input type="submit" value="Lägg till i varukorg" name="add_to_cart" />
+
+									<input class='add-to-cart' type='submit' name='add_to_cart' value='Lägg i varukorg' />
+									<input type='hidden' name='shoe_id' value='<?php echo $shoes->get($product_id)->id ?>' />
 								</form>
 							</p>
 							

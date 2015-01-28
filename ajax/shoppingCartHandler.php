@@ -11,7 +11,6 @@ $cart = new ShoppingCart();
 if ( isset($_POST['add_to_cart']) ) {
 
     $cart->addToCart($shoe, $_POST['shoe_id'], $_POST['size']);
-    unset($_POST['add_to_cart']);
 }
 
 if ( isset($_POST['remove_from_cart']) ) {

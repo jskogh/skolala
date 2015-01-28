@@ -4,9 +4,8 @@ use app\models\Shoes;
 use app\DB;
 // Using this header as a main file for isset stuff. since this is included in all pages
 
-$db = DB::get();
+
 $shoes = new Shoes();
-$shoe = new Shoes();
 
  ?>
 <!DOCTYPE HTML>
@@ -49,18 +48,18 @@ $shoe = new Shoes();
                         <ul>
                             <?php
                             if ( isset($_SESSION['shopping_cart']) ) {
-                                foreach ( array_reverse($_SESSION['shopping_cart']) as $shoeArray) {
+                                foreach ( $_SESSION['shopping_cart'] as $shoeArray) {
                                     echo "<li class='menu_shopping_cart' style='display: block; margin-top: 20px;'>
                                         <p>
-                                            <img style='width: 100px;' src='img/shoes/" . $shoe->get($shoeArray['shoeId'])->pic1 . "' alt='shoe1'/>
+                                            <img style='width: 100px;' src='img/shoes/" . $shoes->get($shoeArray['shoeId'])->pic1 . "' alt='shoe1'/>
                                         </p>
-                                        <p>" . $shoe->get($shoeArray['shoeId'])->product_name . "</p>
-                                        <p>" . $shoe->get($shoeArray['shoeId'])->price . " kr</p>
+                                        <p>" . $shoes->get($shoeArray['shoeId'])->product_name . "</p>
+                                        <p>" . $shoes->get($shoeArray['shoeId'])->price . " kr</p>
                                         <p class='shoe-attr-size'>Storlek: <span>" . $shoeArray['size'] . "</span></p>
                                         <p class='shoe-attr-amount'>antal: <span>" . $shoeArray['amount'] . "</span></p>
                                         <form method='post'>
                                             <input class='remove-from-cart' type='submit' name='remove_from_cart' value='remove'/>
-                                            <input type='hidden' name='shoe_id' value='" . $shoe->get($shoeArray['shoeId'])->id . "' />
+                                            <input class='prod-id' type='hidden' name='shoe_id' value='" . $shoes->get($shoeArray['shoeId'])->id . "' />
                                         </form>
                                     </li>";
                                 }
