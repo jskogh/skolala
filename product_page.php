@@ -5,7 +5,6 @@ use app\models\Shoes;
 use app\DB;
 
 require_once 'app/start.php';
-require_once 'util.php';
 
 ?>
 
