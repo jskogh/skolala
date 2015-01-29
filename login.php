@@ -1,11 +1,48 @@
 <?php
+use app\models\User;
 
 require_once 'app/start.php';
 
 
+$user = new User();
+
+
+if ( isset($_POST['user_registration']) ) {
+    $input = [];
+    $input['email'] = $_POST['email'];
+    $input['f_name'] = $_POST['f_name'];
+    $input['l_name'] = $_POST['l_name'];
+    $input['adress'] = $_POST['adress'];
+    $input['postal_code'] = $_POST['postal_code'];
+    $input['postal_adress'] = $_POST['postal_adress'];
+    if ($_POST['re-password'] == $_POST['password'] ) {
+        $input['password'] = $_POST['password'];
+    }
+    $input['phone'] = $_POST['phone'];
+    $input['newsletter'] = isset($_POST['newletter']) ? 1 : 0;
+
+    $user->create($input);
+
+    try {
+        $user->save();
+        $intendedUrl = $_SESSION["targetUrl"];
+        $user->login($_POST['email'],$_POST['password']);
+        header('location: '.$intendedUrl);
+    }
+    catch (Exception $e) {
+
+        echo $e;
+    }
+}
+
+if ( isset($_POST['user_login']) ) {
+    $user->login($_POST['email'], $_POST['password']);
+}
+
+
 ?>
 
-<?php include("incl/header.php"); ?>
+<?php include("incl/header.php"); var_dump($_SESSION);?>
 
     <div class="login-page">
         <div class="login-form">
@@ -39,7 +76,7 @@ require_once 'app/start.php';
                     <input name="password" type="password"/>
 
                     <label>lösenord (igen)</label>
-                    <input name="password" type="text"/>
+                    <input name="re-password" type="text"/>
                 </div>
                 <div>
                     <label>adress</label>
@@ -55,7 +92,7 @@ require_once 'app/start.php';
                     <input name="phone" type="text"/>
 
                     <label>nyhetsbrev</label>
-                    <input name="newsletter" type="checkbox" checked/> <small>Jag vill se hur jag gör skillnad</small>
+                    <input name="newsletter" type="checkbox" value="on" checked/> <small>Jag vill se hur jag gör skillnad</small>
                 </div>
 
                 <input name="user_registration" type="submit" value="registrera"/>

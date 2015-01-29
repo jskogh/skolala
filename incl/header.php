@@ -47,6 +47,7 @@ $shoes = new Shoes();
                         <h3>Products</h3>
                         <ul>
                             <?php
+
                             if ( isset($_SESSION['shopping_cart']) ) {
                                 foreach ( $_SESSION['shopping_cart'] as $shoeArray) {
                                     echo "<li class='menu_shopping_cart' style='display: block; margin-top: 20px;'>

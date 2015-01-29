@@ -8,8 +8,8 @@ session_start();
 
 // set visitor Session
     if ( ! isset($_SESSION['user']) ) {
-        $_SESSION['user'] = 'visitor';
-        $_SESSION['shopping_cart'] = [];
+            $_SESSION['user'] = 'visitor';
+            $_SESSION['shopping_cart'] = [];
     }
 
 

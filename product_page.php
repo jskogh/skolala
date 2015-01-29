@@ -36,7 +36,6 @@ require_once 'app/start.php';
 						<tr>
 							<?php
 								$rowNumber = 1;
-
 								foreach ($shoes->all() as $shoe) {
 
 
