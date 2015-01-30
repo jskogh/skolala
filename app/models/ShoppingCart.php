@@ -52,11 +52,11 @@ class ShoppingCart {
     public function removeFromCart($shoeId, $size) {
 
         foreach ( $_SESSION['shopping_cart'] as $key => $shoeArray ) {
-            if ( ($_SESSION['shopping_cart'][$key]['shoeId'] === $shoeId) && ($_SESSION['shopping_cart'][$key]['size'] === $size) ) {
-                $_SESSION['shopping_cart'][$key]['amount'] -= 1;
+            if ( ($_SESSION['shopping_cart'][$key]['shoeId'] == $shoeId) && ($_SESSION['shopping_cart'][$key]['size'] == $size) ) {
+
 
                 if ($_SESSION['shopping_cart'][$key]['amount'] > 1) {
-
+                    $_SESSION['shopping_cart'][$key]['amount'] -= 1;
                     $result['attr'] = [
                         'amount' => $_SESSION['shopping_cart'][$key]['amount'],
                         'size' => $_SESSION['shopping_cart'][$key]['size']
@@ -64,6 +64,7 @@ class ShoppingCart {
                     echo json_encode($result);
 
                 } else {
+                    $_SESSION['shopping_cart'][$key]['amount'] -= 1;
                     $result['attr'] = [
                         'amount' => $_SESSION['shopping_cart'][$key]['amount'],
                         'size' => $_SESSION['shopping_cart'][$key]['size']

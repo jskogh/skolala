@@ -14,7 +14,7 @@ if ( isset($_POST['add_to_cart']) ) {
 }
 
 if ( isset($_POST['remove_from_cart']) ) {
-    $cart->removeFromCart($_POST['shoe_id'], $_POST['size']);
+    $cart->removeFromCart( $_POST['shoe_id'], $_POST['size']);
 }
 
 
