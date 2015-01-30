@@ -64,10 +64,11 @@ class User {
         $stm->execute();
 
         $row = $stm->fetchObject();
-
-        if ( password_verify($row->password, $password) ) {
+        if ( password_verify($password, $row->password) ) {
             $_SESSION['user'] = "logged";
             $_SESSION['user_info'] = $row;
+        }else{
+            throw new \Exception("couldn't log in");
         }
     }
 }
