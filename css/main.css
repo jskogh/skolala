@@ -621,3 +621,81 @@ p {
 .options {
 	text-align: center;
 }
+
+/* LOGIN PAGE */
+
+.login-page {
+	min-height: 500px;
+	text-align: center;
+}
+
+.login-page div {
+	display: inline-block;
+	vertical-align: top;
+	margin: 40px 100px 0;
+}
+
+.login-page h5 {
+	margin-bottom: 30px;
+	color: #84CAA0;
+	border-bottom: 1px solid #84CAA0;
+}
+
+.login-page input {
+	display: block;
+	margin: 4px 0 8px 0;
+	height: 25px;
+	width: 200px;
+	font-size: 18px;
+	color: #7C7C7D;
+	text-align: center;
+
+}
+
+.login-page input[type="submit"] {
+	height: 40px;
+	width: 130px;
+	border: 0px;
+	margin: 10px auto;
+	background-color: #9adaac;
+	color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.register-form {
+	display: block;
+
+}
+
+
+.register-form div {
+	margin: 0px 10px 0;
+}
+
+.register-form div label {
+	display: block;
+	text-transform: none;
+}
+
+.register-form div input[type="checkbox"] {
+	display: inline-block;
+	width: auto;
+	margin-right: 10px;
+}
+
+.register-form div small {
+	text-align: left;
+	font-size: 14px;
+	text-transform: none;
+	display: inline-block;
+	vertical-align: top;
+	width: 180px;
+	margin-top: 11px;
+}
+
+.login-form label {
+	text-transform: none;
+}
