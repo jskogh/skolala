@@ -87,6 +87,10 @@ a:hover {
 	overflow-y: auto;
 }
 
+#shopping_cart_preview img {
+	display: inline-block;
+}
+
 #shopping_cart_preview input[type="submit"] {
 	height: 27px;
 	width: 110px;
@@ -123,7 +127,7 @@ a:hover {
 	display: inline-block;
 }
 
-#view_product input[type="submit"] {
+#view_product input[type="button"] {
 	height: 20px;
 	width: 90px;
 	border: 0px;
@@ -502,6 +506,10 @@ ul, li {
 	text-transform: uppercase;
 	cursor: pointer;
 	
+}
+
+.cart-item-inline {
+	display: inline-block;
 }
 
 

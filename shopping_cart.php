@@ -15,9 +15,9 @@ require_once 'app/start.php';
                 <?php
                 if ( count($_SESSION['shopping_cart']) > 0 ) {
                     foreach ( $_SESSION['shopping_cart'] as $shoeArray) {
-                        echo "<li class='menu_shopping_cart' style='display: block; margin-top: 20px;'>
+                        echo "<li class='menu_shopping_cart'>
                                         <p>
-                                            <img style='width: 100px;' src='img/shoes/" . $shoes->get($shoeArray['shoeId'])->pic1 . "' alt='shoe1'/>
+                                            <img src='img/shoes/" . $shoes->get($shoeArray['shoeId'])->pic1 . "' alt='shoe1'/>
                                         </p>
                                         <p>" . $shoes->get($shoeArray['shoeId'])->product_name . "</p>
                                         <p>" . $shoes->get($shoeArray['shoeId'])->price . " kr</p>
