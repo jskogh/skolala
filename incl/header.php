@@ -36,6 +36,7 @@ $shoes = new Shoes();
                 <a href="index.php"><li>Startsida</li></a>
                 <a href="product_page.php"><li>Shop</li></a>
                 <a href="about.php"><li>Om oss</li></a>
+                <a href="login.php"><li>Logga in</li></a>
 
             </ul>
 
