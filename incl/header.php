@@ -44,33 +44,38 @@ $shoes = new Shoes();
 
                 <div id="shopping_cart_preview">
                     <div id="checkout_summary" style="width: 300px; margin: 0 auto">
-                        <h3>Products</h3>
+                       
                         <ul>
                             <?php
                             if ( isset($_SESSION['shopping_cart']) ) {
                                 foreach ( $_SESSION['shopping_cart'] as $shoeArray) {
-                                    echo "<li class='menu_shopping_cart' style='display: block; margin-top: 20px;'>
-                                        <p>
+                                    echo "<li class='menu_shopping_cart' style='display:inline-block; margin-top: 20px;'>
+                                        
                                             <img style='width: 100px;' src='img/shoes/" . $shoes->get($shoeArray['shoeId'])->pic1 . "' alt='shoe1'/>
-                                        </p>
-                                        <p>" . $shoes->get($shoeArray['shoeId'])->product_name . "</p>
-                                        <p>" . $shoes->get($shoeArray['shoeId'])->price . " kr</p>
+                                        
+                                        </li>
+                                        <li>
+                                        <p>" . $shoes->get($shoeArray['shoeId'])->product_name . "<span class='green'> " . " " . $shoes->get($shoeArray['shoeId'])->price . " kr </span> </p>
                                         <p class='shoe-attr-size'>Storlek: <span>" . $shoeArray['size'] . "</span></p>
                                         <p class='shoe-attr-amount'>antal: <span>" . $shoeArray['amount'] . "</span></p>
+                                        <p>
                                         <form method='post'>
-                                            <input class='remove-from-cart' type='submit' name='remove_from_cart' value='remove'/>
+                                        	<div id='view_product'> <input type='submit' name='view_product_from_cart' value='Till produkt'/> </div>
+                                            <input class='remove-from-cart' type='submit' name='remove_from_cart' value='x'/>
                                             <input class='prod-id' type='hidden' name='shoe_id' value='" . $shoes->get($shoeArray['shoeId'])->id . "' />
                                         </form>
+                                        </p>
                                     </li>";
                                 }
                             }
 
                             ?>
                         </ul>
+
+                    </div>
                         <form action="" method="post">
                             <input type="submit" value="Till Kassan" style="margin-top: 20px;"/>
                         </form>
-                    </div>
                 </div>
             </div>
 

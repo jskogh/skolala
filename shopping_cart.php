@@ -10,8 +10,7 @@ require_once 'app/start.php';
     <?php include("incl/header.php"); ?>
 
     <div id="checkout_content">
-        <div id="checkout_summary" style="width: 300px; margin: 0 auto">
-            <h3>Products</h3>
+        <div id="checkout_summary" style="width: 300px; margin: 0 auto; background: #fff;">
             <ul>
                 <?php
                 if ( count($_SESSION['shopping_cart']) > 0 ) {

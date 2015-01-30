@@ -5,16 +5,12 @@ use app\models\Shoes;
 use app\DB;
 
 require_once 'app/start.php';
-require_once 'util.php';
 
 ?>
 
 			<?php include("incl/header.php"); ?>
-            <div id="slideshow">
-    	        <img id="slideshowImg" src="img/slideshow/01.png" name="slideshow" />
-            </div>
-			
-			<div id="product_content">
+      
+      			<div id="product_content">
 				<div id="product_categories">
 					<ul>
 						<li> <h3> Rubrik1 </h3> </li>
