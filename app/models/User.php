@@ -60,7 +60,7 @@ class User {
         $stm = $this->db->prepare('SELECT *
                                    FROM users
                                    WHERE (email = :email)');
-        $stm->bindParam(':email', $email, PDO::PARAM_STR);
+        $stm->bindParam(':email', strtolower($email), PDO::PARAM_STR);
         $stm->execute();
 
         $row = $stm->fetchObject();
@@ -71,4 +71,5 @@ class User {
             throw new \Exception("couldn't log in");
         }
     }
+
 }

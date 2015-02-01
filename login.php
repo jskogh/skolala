@@ -9,12 +9,12 @@ $user = new User();
 
 if ( isset($_POST['user_registration']) ) {
     $input = [];
-    $input['email'] = $_POST['email'];
-    $input['f_name'] = $_POST['f_name'];
-    $input['l_name'] = $_POST['l_name'];
-    $input['adress'] = $_POST['adress'];
+    $input['email'] = strtolower($_POST['email']);
+    $input['f_name'] = strtolower($_POST['f_name']);
+    $input['l_name'] = strtolower($_POST['l_name']);
+    $input['adress'] = strtolower($_POST['adress']);
     $input['postal_code'] = $_POST['postal_code'];
-    $input['postal_adress'] = $_POST['postal_adress'];
+    $input['postal_adress'] = strtolower($_POST['postal_adress']);
     if ($_POST['re-password'] == $_POST['password'] ) {
         $input['password'] = $_POST['password'];
     }
@@ -37,12 +37,14 @@ if ( isset($_POST['user_registration']) ) {
 
 if ( isset($_POST['user_login']) ) {
     $user->login($_POST['email'], $_POST['password']);
+    $intendedUrl = $_SESSION["targetUrl"];
+    header('location: '.$intendedUrl);
 }
 
 
 ?>
 
-<?php include("incl/header.php"); var_dump($_SESSION);?>
+<?php include("incl/header.php"); ?>
 
     <div class="login-page">
         <div class="login-form">

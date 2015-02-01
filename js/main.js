@@ -18,6 +18,11 @@ $(document).ready(function() {
         removeFromCart(product_id, size, amount, liElement);
     });
 
+    /* == Stripe == */
+
+
+    /* == Strip END ==*/
+
 });
 
 function removeFromCart(product_id, size, amount, liElement) {
@@ -67,5 +72,4 @@ function addToCart(product_id, size) {
         }
         activate = false;
     });
-
 }

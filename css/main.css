@@ -91,7 +91,7 @@ a:hover {
 	display: inline-block;
 }
 
-#shopping_cart_preview input[type="submit"] {
+#shopping_cart_preview input[type="button"] {
 	height: 27px;
 	width: 110px;
 	border: 0px;
@@ -148,6 +148,50 @@ a:hover {
 	font-size: 12px;
 	text-align: left;
 	
+}
+
+.checkout-section {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+
+.checkout-section h5 {
+	margin-top: 30px;
+}
+
+.checkout-form {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+}
+
+.checkout-form input {
+	display: block;
+	margin: 4px 0 8px 0;
+	height: 25px;
+	width: 200px;
+	font-size: 16px;
+	color: #20262B;
+	text-align: center;
+}
+
+.checkout-form label {
+	text-transform: none;
+	font-size: 14px;
+}
+
+.buy-button {
+	font-size: 20px;
+	letter-spacing: 1.2px;
+	display: block;
+	margin: 30px auto;
+	padding: 6px;
+	width: 100px;
+	background-color: #81C89D;
+	color: white;
+	border: none;
+	border-radius: 2px;
 }
 
 ul, li {
@@ -662,8 +706,8 @@ p {
 	margin: 4px 0 8px 0;
 	height: 25px;
 	width: 200px;
-	font-size: 18px;
-	color: #7C7C7D;
+	font-size: 16px;
+	color: #20262B;
 	text-align: center;
 
 }
@@ -694,6 +738,7 @@ p {
 .register-form div label {
 	display: block;
 	text-transform: none;
+	font-size: 14px;
 }
 
 .register-form div input[type="checkbox"] {
@@ -714,4 +759,5 @@ p {
 
 .login-form label {
 	text-transform: none;
+	font-size: 14px;
 }

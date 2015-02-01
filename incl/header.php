@@ -18,6 +18,7 @@ $shoes = new Shoes();
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/shopping_cart.js" type="text/javascript" > </script>
     <script src="js/slideshow.js" type="text/javascript" > </script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <script src="js/main.js" type="text/javascript" > </script>
 </head>
 
@@ -73,7 +74,7 @@ $shoes = new Shoes();
 
                     </div>
                         <form action="" method="post">
-                            <input type="submit" value="Till Kassan" style="margin-top: 20px;"/>
+                            <a href="checkout_page.php"><input type="button" value="Till Kassan" style="margin-top: 20px;"/></a>
                         </form>
                 </div>
             </div>
