@@ -3,6 +3,7 @@ use app\models\User;
 use app\models\Shoes;
 use app\DB;
 // Using this header as a main file for isset stuff. since this is included in all pages
+$user = new User();
 
 
 $shoes = new Shoes();
@@ -17,7 +18,6 @@ $shoes = new Shoes();
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/shopping_cart.js" type="text/javascript" > </script>
-    <script src="js/slideshow.js" type="text/javascript" > </script>
     <script src="https://checkout.stripe.com/checkout.js"></script>
     <script src="js/main.js" type="text/javascript" > </script>
 </head>
@@ -37,7 +37,13 @@ $shoes = new Shoes();
                 <a href="index.php"><li>Startsida</li></a>
                 <a href="product_page.php"><li>Shop</li></a>
                 <a href="about.php"><li>Om oss</li></a>
-                <a href="login.php"><li>Logga in</li></a>
+                <?php
+                    if ($_SESSION['user'] == "logged") {
+                        echo "<a href='login.php'><li class='logout-button'>Logga ut</li></a>";
+                    } else {
+                        echo "<a href='login.php'><li>Logga in</li></a>";
+                    }
+                ?>
 
             </ul>
 

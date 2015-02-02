@@ -18,10 +18,14 @@ $(document).ready(function() {
         removeFromCart(product_id, size, amount, liElement);
     });
 
-    /* == Stripe == */
+    /* == logout == */
+    $('body').on('click', '.logout-button', function(e) {
+        e.preventDefault();
+        $.post('login.php', {user_logout : true}, function() {
+            window.location = "index.php";
+        });
+    });
 
-
-    /* == Strip END ==*/
 
 });
 

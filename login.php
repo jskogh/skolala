@@ -41,6 +41,12 @@ if ( isset($_POST['user_login']) ) {
     header('location: '.$intendedUrl);
 }
 
+if ( isset($_POST['user_logout']) ) {
+    $_SESSION['user'] = "visitor";
+    header('location: index.php');
+    echo "hej";
+}
+
 
 ?>
 

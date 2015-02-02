@@ -95,6 +95,7 @@ if ( $_SESSION['user'] != "logged" ) {
                     // Close Checkout on page navigation
                     $(window).on('popstate', function() {
                         handler.close();
+
                     });
 
                 </script>
