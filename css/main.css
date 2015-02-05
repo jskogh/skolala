@@ -33,7 +33,7 @@ a:hover {
 
 #header {
 	width: 100%;
-	padding: 0 40px 10px 40px;
+	padding: 0 0 10px 0;
 	display: inline-block;
 	border-bottom: 1px solid rgba(88,183,126,0.75);
 }
@@ -49,6 +49,7 @@ a:hover {
 #logo {
 	width: 200px;
 	margin-top: 18px;
+	margin-left: 60px;
 	display: inline-block;
 	
 }
@@ -59,9 +60,9 @@ a:hover {
 }
 
 #navbar {
-	width: 600px;
 	margin-top: 34px;
 	max-height: 30px;
+	margin-right: 60px;
 	display: inline-block;
 	float: right;
 	text-align: center;
@@ -132,6 +133,7 @@ a:hover {
 	width: 90px;
 	border: 0px;
 	margin-left: 0px;
+	margin-right: 3px;
 	margin-top: 10px;
 	background-color: rgba(88,183,126,0.75);
 	color: #fff;
@@ -219,38 +221,34 @@ ul, li {
 	
 }
 
-#top_content a {
-	border-bottom: 1px double #fff;
+.link-frontpage {
 	font-size: 16px;
 	color: #fff;
 	vertical-align: top;
 	text-decoration: none;
 	cursor: pointer;
+	margin-top: -200px;
+
 }
 
 #top_content a:hover {
-	border-bottom: 1px double #fff;
-	font-style: none;
-	font-size: 16px;
-	color: #fff;
-	vertical-align: top;
-	text-decoration: none;
-	font-weight: 300;
+	border-bottom: 0px;
 }
 
 #top_content {
 	background: url("../img/frontpage/alt_header.jpg") ;
 	width: 1100px;
-	height: 345px;
+	height: 365px;
 	margin: 0 auto;
 	margin-bottom: 30px;
 	text-align: center;
-	padding-top: 160px; 
+	padding-top: 140px; 
 	color: #fff;
 	font-size: 182px;
 	font-weight: 200;
 	text-shadow: 5px 3px 20px rgba(0,0,0,0.35);
 }
+
 
 #philosophy {
 	width: 1100px;
@@ -364,9 +362,10 @@ ul, li {
 /** FOOTER **/ 
 
 #footer {
+	width: 100%;
 	background: -webkit-linear-gradient(rgba(0,0,0,0.03) 0%, #a7a5a5 170%) ;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 50px;
 	padding-top: 10px;
 	clear: both;
 }
@@ -425,6 +424,7 @@ ul, li {
 }
 
 .about_title {
+	margin-left: -3px;
 	font-size: 36px;
 	text-transform: uppercase;
 }
@@ -461,20 +461,9 @@ ul, li {
 
 /** PRODUCT PAGE **/
 
-#slideshow {
-	width: 1100px;
-	margin: 0 auto;
-	text-align: center;
-	
-}
-
-#slideshow img {
-	width: 450px;
-	height: 300px;
-}
 
 #product_content {
-	width: 1100px;
+	width: 900px;
 	margin: 0 auto;
 	margin-top: 50px;
 	height: 600px;
@@ -486,17 +475,21 @@ ul, li {
 }
 
 #product_content li {
-	display: block;
+	display: inline;
+	margin-right: 10px;
 }
 
 #product_content ul {
 	margin-bottom: 15px;
-	display: block;	
+	padding-bottom: 5px;
+	padding-left: 5px;
+	border-bottom: 1px solid rgba(88,183,126,0.75);
 }
 
 #product_categories {
-	border-right: 1px solid #000 ;
-	width: 200px;
+	text-align: center;
+	width: 900px;
+	margin: 0 auto;
 	display: inline-block;
 }
 
@@ -506,10 +499,9 @@ ul, li {
 }
 
 #products {
-	width: 800px;
+	width: 900px;
 	display: inline-block;	
-	float: right;
-	margin-right: 30px;
+	margin: 0 auto;
 }
 
 
@@ -680,6 +672,55 @@ p {
 
 .options {
 	text-align: center;
+}
+
+/* BLOG PAGE */
+
+#blog {
+	width: 100%;
+
+}
+#blog p {
+	font-family: "verdana", sans-serif ;
+	font-size: 11px;
+	line-height: 150%;
+	
+}
+
+#blog h2 {
+	margin-top: 20px;
+	color: #000;
+	font-size: 22px;
+}
+
+#blog_name {
+	text-align: center;
+	
+}
+
+#blog_content {
+	background-color: rgba(255,255,255,0.89);
+	padding: 20px;
+	height: 580px;
+	width: 800px;
+	margin: 10px 65px 0 110px;
+	display: inline-block;
+	float: left;
+	
+}
+
+#blog_sidebar {
+	background-color: rgba(255,255,255,0.89);
+	height: 580px;
+	width: 250px;
+	margin-top: 10px;
+	display: inline-block;
+	
+}
+
+.date_text{
+	font-size: 8px;
+	font-style: italic;
 }
 
 /* LOGIN PAGE */
