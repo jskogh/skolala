@@ -11,19 +11,15 @@ require_once 'app/start.php';
 			<?php include("incl/header.php"); ?>
       
       			<div id="product_content">
+      			
 				<div id="product_categories">
 					<ul>
-						<li> <h3> Rubrik1 </h3> </li>
-						<li> Underrubrik </li>
-						<li> Underrubrik </li>
-						<li> Underrubrik </li>
-					</ul>
-					
-					<ul>
-						<li> <h3> Rubrik1 </h3> </li>
-						<li> Underrubrik </li>
-						<li> Underrubrik </li>
-						<li> Underrubrik </li>
+						<li> Kängor </li>
+						<li> Sneakers </li>
+						<li> Läder </li>
+						<li> Skinn </li>
+						<li> Man  </li>
+						<li> Kvinna </li>
 					</ul>
 				</div>
 

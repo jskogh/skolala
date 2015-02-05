@@ -25,7 +25,7 @@ $shoes = new Shoes();
 <div id="wrapper">
     <div id="header">
 
-        <div id="logo">	<!-- <img src="img/logo.png" alt="logotype" width="105px" height="115px"/> -->
+        <div id="logo">	
             <a href="index.php"> <h1><span class="green">Eco</span>Shoes</h1> </a>
         </div>
 
