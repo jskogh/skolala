@@ -13,11 +13,11 @@ require_once 'app/start.php'; // all pages should include this.
 			<?php include("incl/header.php"); ?>
 
 			<div id="content">
-				
+				<a href="product_page.php">
 				<div id="top_content">
-					Shoes Eco <br/>
-					<a href="product_page.php">Börja här </a>
-				</div>
+						<p>Shoes Eco</p> <br/>
+					<p class="link-frontpage"> Börja här</p> 
+				</div> </a>
 				
 				<div id="environment_link">
 					<p> Miljötips #1 : </p>
