@@ -493,8 +493,9 @@ ul, li {
 	display: inline-block;
 }
 
-#product_categories a {
-
+#product_categories li:hover {
+	cursor: pointer;
+	font-weight: bold;
 	
 }
 
