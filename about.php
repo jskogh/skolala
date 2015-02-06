@@ -23,6 +23,9 @@ require_once 'app/start.php';
     		<p class="margin_top">
     			De skor vi säljer är antingen gjorda på ekologiska produkter eller på återvunnet material.
     		</p>
+    		<br>
+    		<p>Läs mer om vår filosofi <a class="green" href="philosophy.php">här</a>
+    		</p>
     	</div>
     	
     	<div id="contact_field"> 
