@@ -29,6 +29,7 @@
             $_SESSION['user_info']->postal_adress
         );
 
+        $_SESSION['shopping_cart'] = [];
 
         header('location: ../purchase_complete.php');
     }catch (Stripe_CardError $e) {
