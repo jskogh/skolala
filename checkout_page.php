@@ -4,6 +4,12 @@ use app\models\Shoes;
 use app\DB;
 
 require_once 'app/start.php';
+require_once 'app/stripeConfig.php';
+
+
+
+
+
 
 $shoes = new Shoes();
 
@@ -45,7 +51,7 @@ if ( $_SESSION['user'] != "logged" ) {
         </div>
         <div class="checkout-section">
             <h5>Leveransadress</h5>
-            <form action="" method="POST">
+            <form class="payment-form" action="app/stripeCharge.php" method="POST">
                 <div class="checkout-form">
                     <label>förnamn</label>
                     <input name="f_name" type="text" value="<?php echo ucfirst($_SESSION['user_info']->f_name) ?>"/>
@@ -66,19 +72,29 @@ if ( $_SESSION['user'] != "logged" ) {
                     <label>postnummer</label>
                     <input name="postal_code" type="text" value="<?php echo $_SESSION['user_info']->postal_code ?>"/>
                 </div>
-                <button class="buy-button">Betala</button>
+
+
+                    <button class="buy-button">Betala</button>
+
 
                 <script>
                     var handler = StripeCheckout.configure({
-                        key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+                        key: "<?php echo $stripe['publishable_key']; ?>",
                         name: "EcoShoes",
                         panelLabel: "Totalt",
                         image: 'img/logo.png',
                         currency: "SEK",
-                        email: "<?php echo $_SESSION['user_info']->email ?>",
+                        email: "<?php echo $_SESSION['user_info']->email; ?>",
                         token: function(token) {
                             // Use the token to create the charge with a server-side script.
                             // You can access the token ID with `token.id`
+                            console.log(token);
+                            $('.payment-form').append($('<input>', {
+                                name: 'stripeToken',
+                                value: token.id,
+                                type: 'hidden'
+                            }));
+                           $('.payment-form').submit();
                         }
                     });
 
@@ -98,10 +114,11 @@ if ( $_SESSION['user'] != "logged" ) {
 
                     });
 
+
                 </script>
 
 
+                </form>
 
-            </form>
         </div>
     </div>

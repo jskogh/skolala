@@ -52,7 +52,7 @@ class User {
         if ( $stm->execute() ) {
 
         }else{
-            throw new \Exception("PDO couldn't execute");
+            throw new \PDOException();
         }
     }
 

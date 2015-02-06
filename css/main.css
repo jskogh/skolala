@@ -761,3 +761,30 @@ p {
 	text-transform: none;
 	font-size: 14px;
 }
+
+.purchase-complete {
+	margin: 160px 0 340px 0;
+	text-align: center;
+	color: #82CAA0;
+	text-transform: none;
+}
+
+.purchase-complete h5 {
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+.purchase-complete p {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.purchase-p {
+	font-size: 16px;
+	color: #000000;
+	margin-top: 40px;
+}
+
+.purchase-p span {
+	color: #82CAA0;
+}

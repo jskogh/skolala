@@ -43,8 +43,7 @@ if ( isset($_POST['user_login']) ) {
 
 if ( isset($_POST['user_logout']) ) {
     $_SESSION['user'] = "visitor";
-    header('location: index.php');
-    echo "hej";
+    $_SESSION["targetUrl"] = "index.php";
 }
 
 

@@ -1,4 +1,7 @@
 {
+  "require": {
+    "stripe/stripe-php": "1.18.0"
+  },
   "autoload": {
     "psr-4": {
       "app\\": "app"
