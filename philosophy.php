@@ -14,7 +14,7 @@ require_once 'app/start.php';
 	<div id="philosophy_page">
 		
 		<div id="philosophy_header">
-			<img src="img/frontpage/plant_tree.gif" alt="plant_tree" width="1100px" height="450px" />
+			<img src="img/frontpage/tree_planting.jpg" alt="plant_tree" width="1100px" height="450px" />
 		</div>
 		
 		<div id="philosophy_text">
