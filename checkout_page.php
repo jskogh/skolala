@@ -48,6 +48,7 @@ if ( $_SESSION['user'] != "logged" ) {
                 }
                 ?>
             </ul>
+            <h5 style="margin: 40px 0 0 40px; font-size: 24px; color: #81C99F; text-transform: none;">Totalt: <?php echo $_SESSION['shopping_cart_total']; ?>kr</h5>
         </div>
         <div class="checkout-section">
             <h5>Leveransadress</h5>
@@ -61,6 +62,7 @@ if ( $_SESSION['user'] != "logged" ) {
 
                     <label>mobil (SMS avi)</label>
                     <input name="phone" type="text" value="<?php echo $_SESSION['user_info']->phone ?>"/>
+
                 </div>
                 <div class="checkout-form">
                     <label>adress</label>
@@ -71,7 +73,14 @@ if ( $_SESSION['user'] != "logged" ) {
 
                     <label>postnummer</label>
                     <input name="postal_code" type="text" value="<?php echo $_SESSION['user_info']->postal_code ?>"/>
+
                 </div>
+                <div>
+                    <label style="text-transform: none; line-height: 1.2;" for="tree">Kompensera ditt köp<br> genom att <a style="text-decoration: underline;" href="philosophy.php">plantera ett träd!</a> <br>(50kr tillägg)</label>
+                    <input style="margin-top: 0px;" name="tree" type="checkbox"/>
+                </div>
+
+
 
 
                     <button class="buy-button">Betala</button>
