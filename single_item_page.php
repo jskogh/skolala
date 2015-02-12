@@ -22,9 +22,9 @@ if ( isset($_GET['product-id']) ) {
 							<img src="img/shoes/<?php echo $shoes->get($product_id)->pic1 ?>" alt="product" />
 							
 							<div id="more_images">
-								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic1 ?>" alt ="shoe1" />
-								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic1 ?>" alt ="shoe2" />
-								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic1 ?>" alt ="shoe3" />
+								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic2 ?>" alt ="shoe1" />
+								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic3 ?>" alt ="shoe2" />
+								<img src="img/shoes/<?php echo $shoes->get($product_id)->pic4 ?>" alt ="shoe3" />
 							</div>
 							
 							
