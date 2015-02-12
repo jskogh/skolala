@@ -30,7 +30,7 @@ require_once 'app/start.php';
     	
     	<div id="contact_field"> 
     		<p class="about_title"> Kontakt</p>
-    		<p><span class="bold"> Mail:</span> <br /> info@skolala.se</p>
+    		<p><span class="bold"> Mail:</span> <br /> info@ecoshoes.se</p>
     		<br/>
     		<p><span class="bold"> Telefon: </span><br /> 073-3333333</p>
     		<br/>    		
