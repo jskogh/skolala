@@ -37,7 +37,7 @@ $shoes = new Shoes();
                 <a href="index.php"><li>Startsida</li></a>
                 <a href="product_page.php"><li>Shop</li></a>
                 <a href="about.php"><li>Om oss</li></a>
-                <a href="ecoshoesmiljoblog.wordpress.com" target="_blank"><li>Miljöbloggen</li></a>
+                <a href="https://ecoshoesmiljoblogg.wordpress.com" target="_blank"><li>Miljöbloggen</li></a>
                 <?php
                     if ($_SESSION['user'] == "logged") {
                         echo "<a href='login.php'><li class='logout-button'>Logga ut</li></a>";

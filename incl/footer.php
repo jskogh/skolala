@@ -5,7 +5,7 @@
 						<li> | </li>
 						<li> <a href="philosophy.php">Plantera träd </a> </li>
 						<li> | </li>
-						<li> <a href="blogg.php"> Miljöbloggen </a> </li>
+						<li> <a href="https://ecoshoesmiljoblogg.wordpress.com"> Miljöbloggen </a> </li>
 						<li> | </li>
 						<li> <a href="my_page.php">Min sida </a> </li>
 						<li> | </li> 
