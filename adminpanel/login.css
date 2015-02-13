@@ -1,0 +1,45 @@
+body {
+    background: url('seamless_paper_texture.png');
+    color: #2a2a2a;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px;
+}
+
+#loginbox {
+    margin: 0 auto;
+    text-align: center;
+    width: 700px;
+    padding: 50px;
+}
+
+input[type=text] {
+    padding:20px;
+    width: 350px;
+    font-size: 20px;
+    color: #2a2a2a;
+    border: 1px solid transparent;
+}
+input:focus {
+    border: 1px #000 solid;
+}
+
+input[type=submit] {
+    width: 350px;
+    margin-top: 30px;
+    font-size: 30px;
+    padding: 20px;
+}
+
+table {
+    margin: 0 auto;
+    text-align: left;
+    font-size: 30px;
+}

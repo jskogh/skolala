@@ -1,0 +1,303 @@
+html {
+    overflow: scroll;
+}
+
+body {
+    background: url('seamless_paper_texture.png');
+    color: #2a2a2a;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+}
+
+/* Top menu */
+
+#navigation {
+    display: inline-block;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    height: 80px;
+    text-align: center;
+    padding-top: 30px;
+    background-color: rgba(88, 183, 126, 0.75);
+    color: rgba(1, 1, 1, 0.8);
+    z-index: 10;
+    letter-spacing: 1px;
+}
+
+#navigation a {
+    font-size: 24px;
+    font-weight: 300;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+#navigation a:hover {
+    color: #fff;
+}
+
+#nav_logo {
+    display: inline-block;
+    width: 10%;
+    color: #fff;
+    font-weight: 400;
+}
+
+.nav_logo {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav_menu {
+    display: inline-block;
+    width: 88%;
+    text-align: left;
+}
+
+#nav_logout {
+    display: inline-block;
+    width: 10%;
+}
+
+input[type=submit].logout {
+     width: 120px;
+     height: 50px;
+     background-color: transparent;
+     font-weight: 300;
+     font-size: 24px;
+     border: 0px;
+ }
+
+input[type=submit].logout:active {
+    color: grey;
+    border: 0px;
+}
+
+input[type=submit].logout:hover {
+    color: grey;
+    border: 0px;
+    cursor: pointer;
+}
+
+/* Content */
+
+#wrapper {
+    width: 100%;
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+#wrapper h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+#wrapper table {
+    padding-top: 10px;
+}
+
+#wrapper td {
+    padding: 5px;
+    padding-left: 0px;
+}
+
+#wrapper th {
+    text-align: left;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+#wrapper ul {
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper li {
+    font-size: 18px;
+    text-align: left;
+}
+
+#wrapper li a {
+    color: #2a2a2a;
+    text-decoration: underline;
+}
+
+#wrapper li a:hover {
+    color: grey;
+}
+
+#wrapcenter {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+}
+
+#wrapcenter table {
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: left;
+    width: 400px;
+}
+
+#wrapcenter td {
+    font-size: 18px;
+}
+
+#leftmenu {
+    display: inline-block;
+    width:12%;
+    vertical-align: top;
+}
+
+#listcontent {
+    display: inline-block;
+    width: 87%;
+    vertical-align: top;
+}
+
+h1.newproduct {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+input[type=text].addproduct {
+    padding: 5px;
+    font-size: 16px;
+}
+
+input[type=submit].submitnewproduct {
+    width:70%;
+    height: 70px;
+    background: #43ed83;
+    border: 0;
+    font-weight: 400;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+input[type=submit].submitnewproduct:active {
+    background: #3fdb78;
+}
+
+input[type=submit].submitexcel {
+    width:25%;
+    height: 70px;
+    background: #43ed83;
+    border: 0;
+    font-weight: 400;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+input[type=submit].submitexcel:active {
+    background: #3fdb78;
+}
+
+input[type=file].uploadexcel {
+    width:25%;
+    height: 70px;
+    border: 0;
+    font-weight: 400;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+select {
+    padding: 5px;
+    width: 195px;
+    font-size: 16px;
+}
+
+/* Ta bort produkt-knapp */
+
+.allproducts {
+    padding-bottom: 40px;
+}
+
+.allproducts th {
+    background-color: rgba(88, 183, 126, 0.75);
+    font-size: 18px;
+}
+.allproducts td {
+    text-align: center;
+}
+.allproducts tr {
+    background: #fff;
+}
+/* .allproducts tr:nth-child(odd) {
+    background: #FFF
+} */
+
+.allproducts a {
+    text-decoration: none;
+    color: #2a2a2a;
+}
+
+.allproducts a:hover {
+    text-decoration: underline;
+}
+
+input[type=submit].deactivateproduct {
+    background: transparent;
+    border: 0px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: red;
+    padding: 0;
+    margin: 0;
+}
+
+.deactivate {
+    margin: 0;
+    padding: 0;
+}
+
+#news_sub {
+    width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+input[type=text].newslettersubject {
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+textarea.newsletter {
+    width:740px;
+    height: 300px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#news_sub input[type=submit] {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 740px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#message_sent {
+    background: #E1EBF8;
+    width: 660px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
